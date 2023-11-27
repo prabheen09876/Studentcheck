@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Check</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .banner {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        background-image: url('images/banner-background.jpg');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 80px;
+        color: white;
+      }
+      
+      .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+        </style>
+        <script>
+            window.addEventListener('scroll', () => {
+          const scrollTop = window.scrollY;
+          const scrollProgress = scrollTop / (window.innerHeight - 700);
+          const translateY = -200 * scrollProgress; // Adjust the value to control the depth of the parallax effect
+        
+          const opacity = 1 - scrollProgress; // Adjust the value to control the vanishing point of the text
+        
+          document.querySelector('.banner-content').style.transform = `translate(-50%, ${translateY}px) scale(${opacity})`;
+          document.querySelector('.banner-content').style.opacity = opacity;
+        });
+          </script>
+
+</head>
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+
+    <section class="banner">
+        <div class="banner-content">
+          <h1>Student Check</h1>
+          <p>A comprehensive attendance management system for schools and colleges.</p>
+          
+        </div>
+      </section>
+    <section class="about">
+        
+        <h2>About Student Check</h2>
+        <p>Student Check is a user-friendly and easy-to-use attendance management system that helps schools and colleges track student attendance accurately and efficiently. With its intuitive interface and powerful features, Student Check streamlines the attendance process and saves valuable time for teachers and administrators.</p>
+        <ul class="about-features">
+          <li>Mark student attendance with a single click</li>
+          <li>Generate detailed attendance reports</li>
+          <li>Track attendance trends over time</li>
+          <li>Send attendance alerts to parents and guardians</li>
+          <li>Manage student information securely</li>
+        </ul>
+        <a href="#management" class="banner-button">Get Started</a>
+      </section>
+    
+
+    <section id="management">
+        <h2>Attendance Management</h2>
+
+        <h3>Student List</h3>
+        <ul class="student-list">
+            <li class="student">
+                <span class="student-name">Preeti Singh</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Preeti Singh">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Preeti Singh">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Preeti Singh">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Abhishek Kumar</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Abhishek Kumar">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Abhishek Kumar">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Abhishek Kumar">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Nancy</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Nancy">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Nancy">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Nancy">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Shilpi Gupta</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Shilpi Gupta">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Shilpi Gupta">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Shilpi Gupta">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Om Tiwari</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Om Tiwari">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Om Tiwari">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Om Tiwari">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Shubhanee</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Shubhanee">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Shubhanee">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Shubhanee">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Shivani Kumari</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Shivani Kumari">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Shivani Kumari">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Shivani Kumari">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Nitesh</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Nitesh">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Nitesh">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Nitesh">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Abhishek</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Abhishek">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Abhishek">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Abhishek">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Abhishek Bharti</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Abhishek Bharti">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Abhishek Bharti">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Abhishek Bharti">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Ridhi</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Ridhi">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Ridhi">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Ridhi">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Yash Mogha</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Yash Mogha">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Yash Mogha">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Yash Mogha">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Vansh</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Vansh">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Vansh">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Vansh">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Prem Kumar</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Prem Kumar">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Prem Kumar">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Prem Kumar">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Rehaan Siddiki</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Rehaan Siddiki">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Rehaan Siddiki">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Rehaan Siddiki">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Khushi Mandal</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Khushi Mandal">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Khushi Mandal">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Khushi Mandal">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Aryan Singh</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Aryan Singh">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Aryan Singh">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Aryan Singh">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Manish Yadav</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Manish Yadav">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Manish Yadav">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Manish Yadav">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Aniketa Bala</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Aniketa Bala">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Aniketa Bala">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Aniketa Bala">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Shubham Poddar</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Shubham Poddar">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Shubham Poddar">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Shubham Poddar">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Aryan Mehto</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Aryan Mehto">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Aryan Mehto">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Aryan Mehto">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Diksha Kumari</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Diksha Kumari">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Diksha Kumari">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Diksha Kumari">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Pratykshaa Seth</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Pratykshaa Seth">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Pratykshaa Seth">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Pratykshaa Seth">Absent</button>
+                </div>
+            </li>
+            <li class="student">
+                <span class="student-name">Mivaan Singh Bisht</span>
+                <div class="attendance-buttons">
+                    <button class="attendance-button" data-date="" data-student="Mivaan Singh Bisht">Present</button>
+                    <button class="attendance-button" data-date="" data-student="Mivaan Singh Bisht">Leave</button>
+                    <button class="attendance-button" data-date="" data-student="Mivaan Singh Bisht">Absent</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="attendance-history">
+        <h2>Attendance History</h2>
+        <div id="attendance-records"></div>
+    </section>
+
+    <section class="reports">
+        <h2>Reports</h2>
+        <div class="report-summary">
+            <h3>Summary</h3>
+            <p>Total Students: <span id="total-students"></span></p>
+            <p>Students Present: <span id="students-present"></span></p>
+            <p>Students on Leave: <span id="students-leave"></span></p>
+            <p>Students Absent: <span id="students-absent"></span></p>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
