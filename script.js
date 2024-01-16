@@ -56,3 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateSummary();
 });
+function captureAndDownload() {
+    var captureDiv = document.getElementById("attendance-history");
+    html2canvas(captureDiv).then(function (canvas) {
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.download = "attendance.png";
+      link.href = canvas.toDataURL("image/png");
+      link.target = "_blank";
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
