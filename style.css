@@ -44,16 +44,16 @@
     color: white;
   }
   
-  .attendance-history {
+  #attendance-history {
     margin-top: 20px;
   }
   
-  .attendance-history h3 {
+  #attendance-history h3 {
     font-size: 20px;
     margin-bottom: 10px;
   }
   
-  .attendance-history p , h2{
+  #attendance-history p , h2{
     margin-left: 25px;
   }
   
@@ -99,7 +99,7 @@
     font-size: 16px;
   }
   ::selection {
-    background-color: #ffcc00;
+    background-color: #ffcc00af;
     color: #333;
   }
   .buttonn{
@@ -111,3 +111,12 @@
  #management{
 margin-left: 25px;
  }
+#downloadbtn{
+  /* background-color: rgb(255, 200, 97); */
+  height: 40px;
+  width: 90%;
+  margin: 5%;
+}
+#attendance-records{
+  margin-left: 20%;
+}
